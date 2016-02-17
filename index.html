@@ -80,9 +80,11 @@ Tutorials<span class="caret"></span></a>
     </nav>
 
     <div class="container">
+<!-- start command pattern -->
 <h1>Command Pattern</h1>
 <p class="lead">
 요청 혹은 작업의 단위를 객체로 캡슐화 한다. Command는 객체가 상태 정보를 저장할 수 있고, 큐잉되거나 로깅될 수 있다는 면에서 C언어의 함수 포인터보다 막강한 기능을 제공한다.</p>
+
 <h2>구성</h2>
 <dl class="dl-horizontal">
 <dt>Command</dt>
@@ -97,14 +99,19 @@ Tutorials<span class="caret"></span></a>
 <dd>요청을 어떻게 처리해야 하는지를 알고 있다. 이 기능은 종종 Command 객체 자체에 내장된다.</dd>
 </dl>
 
+<h2>
+구조
+</h2>
+<img src="./res/command_pattern.gif" class="img-responsive" alt="command pattern structure image">
 
 <h2>장단점</h2>
 <ul>
 <li>Command는 연산과 연산을 실제로 수행하는 객체 간의 결합도를 줄여준다.</li>
 </ul>
-<h2>예제</h2>
-<p></p>
 
+<h2>예제</h2>
+<script src="https://gist.github.com/sebaek/eff690b84ca021cb51ad.js"></script>
+<!-- end command pattern -->
     </div><!-- /.container -->
 
 
