@@ -52,7 +52,7 @@
           <ul class="nav navbar-nav">
 	    <li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-<i class="fa fa-gears"></i>
+<i class="fa fa-pencil"></i>
 Tutorials<span class="caret"></span></a>
 		<ul class="dropdown-menu">
 		    <li><a href="#">Basic of Programming</a></li>
@@ -72,6 +72,15 @@ Tutorials<span class="caret"></span></a>
 		    <li><a href="#">Spring Security</a></li>
 		</ul>
 	    </li>
+	    <li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+<i class="fa fa-gears"></i>
+Design Patterns<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		    <li><a href="#commandPattern">Command</a></li>
+		    <li><a href="#mediatorPattern">Mediator</a></li>
+		</ul>
+	    </li>
             <li><a href="#sites"><i class="fa fa-desktop"></i> Sites</a></li>
             <li><a href="#about"><i class="fa fa-info-circle"></i> About</a></li>
           </ul>
@@ -81,7 +90,7 @@ Tutorials<span class="caret"></span></a>
 
     <div class="container">
 <!-- start command pattern -->
-<h1>Command Pattern</h1>
+<h1 id="commandPattern">Command Pattern</h1>
 <p class="lead">
 요청 혹은 작업의 단위를 객체로 캡슐화 한다. Command는 객체가 상태 정보를 저장할 수 있고, 큐잉되거나 로깅될 수 있다는 면에서 C언어의 함수 포인터보다 막강한 기능을 제공한다.</p>
 
@@ -113,7 +122,7 @@ Tutorials<span class="caret"></span></a>
 <script src="https://gist.github.com/sebaek/eff690b84ca021cb51ad.js"></script>
 <!-- end command pattern -->
 <!-- start mediator pattern -->
-<h1>Mediator Pattern</h1>
+<h1 id="mediatorPattern">Mediator Pattern</h1>
 <p class="lead">
 객체들 사이의 복잡한 관계를 캡슐화하는 단일 객체를 정의한다. Mediator는 복잡성을 감춤으로써 코드를 단순화시켜준다. 이는 Mediaor를 사용하는 객체들과 Mediator가 사용하는 객체들 사이의 결합도를 줄여준다.
 
