@@ -1,0 +1,54 @@
+<h1 id="compositePattern">Composite Pattern</h1>
+<p class="lead">
+컨테이너/컨텐츠(전체/부분) 관계를 나타내는 런타임 객체 구조를 공통 인터페이스를 구현하는 객체의 집합으로 조직화한다. 인터페이스를 구현하는 객체 중 일부는 독립형 객체를 정의하고, 일부는 인터페이스를 준수하는 다른 객체를 담을 수 있는 컨테이너를 정의한다. 이때 컨테이너는 컨테이너를 포함할 수 있다.
+</p>
+
+<h2>구성</h2>
+<dl class="dl-horizontal">
+<dt>Component</dt>
+<dd>Composition에 있는 객체들의 인터페이스
+</dd>
+<dd>모든 객체의 기본 기능을 구현한다.
+</dd>
+<dd>자식 Component의 접근 및 수정 기능을 선언한다.
+</dd>
+<dd>(optional) 재귀적으로 부모 Component를 탐색하는 기능을 정의한다. 적절하다면 구현까지 한다.
+</dd>
+<dt>Leaf</dt>
+<dd>Composition의 Leaf객체이다. Leaf객체는 자식이 없다.
+</dd>
+<dd>Composition에 있는 primitive 객체의 기능을 정의한다.
+</dd>
+<dt>Composite</dt>
+<dd>자식을 가지고 있는 컴포넌트의 기능을 정의한다.
+</dd>
+<dd>자식 컴포넌트를 저장한다.
+</dd>
+<dd>Component 인터페이스에 있는 자식에 관련된 기능을 구현한다.
+</dd>
+<dt>Client</dt>
+<dd>Component 인터페이스를 통해서 Composition에 있는 객체들을 조작한다.
+</dd>
+</dl>
+
+<h2>
+구조
+</h2>
+<img src="./res/composite_diagram.gif" class="img-responsive" alt="composite pattern structure image">
+
+<h2>장단점</h2>
+<ul>
+<li>컨테이너는 모든 컨텐츠를 동일하게 다루기 때문에 구현하기 쉽다.
+</li>
+<li>새로운 Component 클래스를 추가하기 쉽다. Component 클래스(혹은 인터페이스)를 상속하면 되기 때문이다.
+</li>
+<li>Component는 만족스럽지 못한 최소의 공통 인터페이스만을 규정하게 되는 경향이 있다.
+</li>
+<li>Composit 혹은 Leaf가 Component의 모든 메소드를 구현하는 것이 언제나 의미 있거나 적절한 것은 아니다. 만약 구현하지 않는 메소드에서 예외를 던지게 되면 다루기 힘든 런타임 에러가 발생하게 된다.
+</li>
+</ul>
+
+<h2>예제</h2>
+<!-- <script src="https://gist.github.com/sebaek/81c78f41aa44e152195f.js"></script> -->
+<a class="btn btn-default" href="https://gist.github.com/sebaek/81c78f41aa44e152195f" role="button">예제 코드 보기</a>
+
