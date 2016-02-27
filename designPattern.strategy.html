@@ -1,0 +1,37 @@
+<h1 id="strategyPattern">Strategy Pattern</h1>
+<p class="lead">
+어떤 알고리즘을 위한 전략을 정의하는 인터페이스를 정의한다. 상호 교환 가능한 클래스군이 인터페이스를 구현하며, 하나의 클래스는 하나의 알고리즘을 나타낸다.
+</p>
+
+<h2>구성</h2>
+<dl class="dl-horizontal">
+<dt>Strategy</dt>
+<dd>알고리즘으로의 접근을 허용하는 인터페이스</dd>
+<dt>Concrete Strategy</dt>
+<dd>Strategy 인터페이스를 따라 특정 알고리즘을 구현한다.</dd>
+<dt>Context</dt>
+<dd>Strategy 인터페이스를 통해 알고리즘을 사용한다.</dd>
+</dl>
+
+<h2>
+구조
+</h2>
+<img src="./res/strategy.gif" class="img-responsive" alt="strategy pattern structure image">
+
+<h2>장단점</h2>
+<ul>
+<li>Strategy는 파생 클래싱의 좋은 대안이다. 클래스를 상속하고 메소드를 오버라이딩하는 대신 단순한 인터페이스를 구현하면 된다.
+</li>
+<li>Strategy 객체는 Context 클래스는 필요로하지 않는 알고리즘 특정 데이터에 집중한다.
+</li>
+<li>시스템에 새로운 Strategy를 추가하기 쉽ㄴ다. 이때 기존클래스들을 재컴파일하지 않아도 된다.
+</li>
+<li>통신 오버헤드가 클 수 있다. Strategy 객체에 전달된 인자의 일부는 사용되지 않을 수도 있다(?).
+</li>
+<li>Communication overhead is small.Some of the arguments passed to the Strategy objects may not be used.
+</li>
+</ul>
+
+<h2>예제</h2>
+<!-- <script src="https://gist.github.com/sebaek/debc52acc6f87f22e060.js"></script> -->
+<a class="btn btn-default" href="https://gist.github.com/sebaek/debc52acc6f87f22e060" role="button">예제 코드 보기</a>
