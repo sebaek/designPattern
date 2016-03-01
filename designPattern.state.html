@@ -1,0 +1,44 @@
+<h1 id="statePattern">State Pattern</h1>
+<p class="lead">
+객체는 상태에 따라 기능을 변경할 필요가 있을 때가 있다. 기능을 변경하는 메소드들로 이루어진 인터페이스를 정의한다. 그리고 인터페이스 구현에서 각각의 상태에 따른 기능을 정의한다.
+</p>
+
+<h2>구성</h2>
+<dl class="dl-horizontal">
+<dt>Context</dt>
+<dd>Client에게 노출하는 인터페이스를 정의한다.
+</dd>
+<dd>현재 상태를 정의한 Concrete State의 인스턴스를 관리한다.
+</dd>
+<dt>State</dt>
+<dd>Context의 특정 상태에 관련한 기능을 캡슐화한 인터페이스를 정의한다.
+</dd>
+<dt>Concrete State</dt>
+<dd>Context의 상태에 관련한 기능을 구현한다.
+</dd>
+</dl>
+
+<h2>
+구조
+</h2>
+<img src="./res/state.gif" class="img-responsive" alt="state pattern structure image">
+
+<h2>장단점</h2>
+<ul>
+<li>State의 메커니즘은 상태에 대한 모든 기능이 한 곳에 있기 때문에 유지 보수하기 편하다.
+</li>
+<li>메소드 안의 길고 유지 보수하기 어려운 switch 문을 제거한다.
+</li>
+<li>상태 테이블을 구현하기 어렵다.
+</li>
+<li>클래스수가 증가되여 유지 보수가 어려워질 수 있다.
+</li>
+<li>상태에 따라 변하는 기능의 메소드 수가 적다면 이 방법은 복잡성을 증가시킬 뿐이다.
+</li>
+</ul>
+
+<h2>예제</h2>
+<!-- <script src="https://gist.github.com/sebaek/03fe2793b515fa1de6d5.js"></script> -->
+<a class="btn btn-default" href="https://gist.github.com/sebaek/03fe2793b515fa1de6d5" role="button">예제 코드 보기</a>
+
+
