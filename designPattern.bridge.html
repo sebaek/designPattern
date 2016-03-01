@@ -1,0 +1,41 @@
+<h1 id="bridgePattern">Bridge Pattern</h1>
+<p class="lead">
+서브시스템 사이의 결합도를 줄임으로써 각 서브시스템이 서로에 영향을 미치지 않으면서 변경될 수 있도록 한다. 두 서브시스템 사이에 인터페이스들을 삽입하고, 각 서브시스템이 이들 인터페이스를 사용함으로써 목적을 달성한다.
+</p>
+
+<h2>구성</h2>
+<dl class="dl-horizontal">
+<dt>Abstraction</dt>
+<dd>abstraction의 인터페이스를 정의한다.
+</dd>
+<dd>implementor 타입의 객체를 관리한다.
+</dd>
+<dt>Refined Abstraction</dt>
+<dd>abstraction을 상속한다.
+</dd>
+<dt>Implementor</dt>
+<dd>implementation클래스를 위한 인터페이스를 정의한다. 이 인터페이스는 abstraction의 인터페이스와 일치하지 않아도 된다. 사실 매우 다를 수 있다. 보통 이 인터페이스는 primitive한 기능을 제공하고, abstraction은primitive한 기능을 기반으로 고차원의 기능을 정의한다.
+</dd>
+<dt>Concrete Implementor</dt>
+<dd>implementor인터페이스를 구현한다.
+</dd>
+</dl>
+
+<h2>
+구조
+</h2>
+<img src="./res/bridge.gif" class="img-responsive" alt="bridge pattern structure image">
+
+<h2>장단점</h2>
+<ul>
+<li>순수 상속 모델이라면 기반 클래스가 몇몇 행동을 구현하고, 파생 클래스가 이러한 행동을 특정 플랫폼에 맞게 커스터마이징할 것이다. Bridge에서는 기반 클래스의 역할을 인터페이스가 하기 때문에 구현상속과 관련된 문제가 거의 없어지며, 클래스들의 총 숫자가 줄어든다.
+</li>
+<li>인터페이스의 각 구현이 동일하게 행동하도록 구현하는 것이 어렵다. 자바의 AWT Bridge는 여러 운영체제에 대한 윈도 컴포넌트를 구현했지만, Motif 구현은 Windows 구현과 다른 방식으로 작동했다.
+</li>
+</ul>
+
+<h2>예제</h2>
+<!-- <script src="https://gist.github.com/sebaek/6d55ae58999791b62b5e.js"></script> -->
+<a class="btn btn-default" href="https://gist.github.com/sebaek/6d55ae58999791b62b5e" role="button">예제 코드 보기</a>
+
+
